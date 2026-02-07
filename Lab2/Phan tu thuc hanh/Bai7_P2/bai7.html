@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <table border="1" cellspacing="0" cellpadding="8" align="center" width="600" style="background-color: #fff9c4;">
+            <tr style="background-color: #ffcc80;">
+                <th colspan="2" style="font-size: 24px; color: #003366;">Đăng ký du lịch</th>
+            </tr>
+            <tr>
+                <td width="150">Họ và tên</td>
+                <td><input type="text" name="hoten" value="" style="width: 300px;"></td>
+            </tr>
+
+            <tr>
+                <td>Địa chỉ</td>
+                <td><input type="text" name="diachi" value="Hà Nội" style="width: 200px;"></td>
+            </tr>
+
+            <tr>
+                <td>Điện thoại</td>
+                <td><input type="tel" name="dienthoai" value="123454" style="width: 100px;"></td>
+            </tr>
+
+            <tr>
+                <td>Khách Việt Nam</td>
+                <td><input type="checkbox" name="isVN" checked></td>
+            </tr>
+
+            <tr>
+                <td>Chọn tour</td>
+                <td>
+                    <select name="tour">
+                        <optgroup label="Miền Bắc">
+                            <option>Hà Nội </option>
+                            <option>Hạ Long</option>
+                        </optgroup>
+                        <optgroup label="Miền Trung">
+                            <option selected>Buôn mê thuật</option>
+                            <option>Nhà trang</option>
+                            <option>Đà Lạt</option>
+                        </optgroup>
+                        <optgroup label="Miền Nam">
+                            <option>TP.HCM</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Phương tiện</td>
+                <td>
+                    <input type="radio" name="pt" id="maybay"> <label for="maybay">Máy bay</label>
+                    <input type="radio" name="pt" id="oto" checked> <label for="oto">ô tô</label>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <div style="border: 1px solid #999; padding: 10px; position: relative;">
+                        <span style="position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: #fff9c4; padding: 0 10px; font-weight: bold;">
+                            Số lượng đoàn khách
+                        </span>
+                        <b>Người lớn</b> <input type="number" value="6" style="width: 60px; margin-right: 20px;">
+                        <b>Trẻ em</b> <input type="number" value="4" style="width: 60px;">
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td>Ghi chú thêm</td>
+                <td>
+                    <textarea name="ghichu" rows="3" style="width: 95%;">Có 2 trẻ em dưới 6 tuổi&#10;Có 2 người ăn chay</textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="submit" value="Đồng ý">
+                </td>
+            </tr>
+
+            <tr>
+                <td colspan="2" align="center" style="color: orange;">
+                    Bạn đã đăng ký thành công
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
