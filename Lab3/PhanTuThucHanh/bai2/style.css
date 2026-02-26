@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    background-color: greenyellow;
+    width: 200px;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+}
+.box-tag{
+    width: 50px;
+    height: 50px;
+    color: white;
+    background-color: red;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
