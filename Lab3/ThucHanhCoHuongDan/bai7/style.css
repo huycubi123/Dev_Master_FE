@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.block-box{
+    display: block;
+    background-color: lightblue;
+    margin-bottom: 15px;
+    padding: 10px;
+}
+
+.inline-box{
+    display: inline-block;
+    background-color: lightcoral;
+    padding: 5px;
+}
+
+.menu-item{
+    display: inline-block;
+    background-color: lightgreen;
+    padding: 10px 20px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+.hidden-box{
+    display: none;
+}
