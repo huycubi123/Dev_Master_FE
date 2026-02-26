@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    display: flex;             
+    align-items: center;     
+    padding: 15px 20px;
+    z-index: 1000;
+}
+
+header b {
+    margin-right: 30px;        
+}
+
+header a {
+    color: white;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+.container {
+  display: flex;
+  margin-top: 60px; 
+}
+
+aside {
+  width: 200px;
+  padding: 15px;
+  background: #f0f0f0;
+  position: sticky;
+  top: 60px;
+  height: 100vh;
+}
+
+/* CONTENT */
+main {
+  flex: 1;
+  padding: 15px;
+}
+
+.box {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}

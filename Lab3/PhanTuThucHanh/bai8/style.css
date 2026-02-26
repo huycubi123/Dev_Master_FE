@@ -1,0 +1,43 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center; /* căn giữa ngang */
+  align-items: center; /* căn giữa dọc */
+  height: 100vh;
+  font-family: Arial;
+  background: #f5f5f5;
+}
+
+.card {
+  width: 280px;
+  background: white;
+  border: 2px solid orange;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.name {
+  font-weight: bold;
+  margin: 15px 0;
+}
+
+.price {
+  color: red;
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+
+button {
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+}
