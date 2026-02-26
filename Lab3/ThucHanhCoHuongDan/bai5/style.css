@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* FIXED: Bám chặt vào màn hình, không chiếm diện tích */
+.navbar {
+  background-color: #333;
+  color: white;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000; /* Đảm bảo luôn nằm trên cùng */
+}
+
+.container {
+  margin-top: 60px; /* Bù lại khoảng trống bị mất do .navbar fixed */
+  padding: 20px;
+}
+
+.section-box {
+  background-color: white;
+  margin-bottom: 50px;
+  border: 2px dashed #ccc;
+  position: relative; /* Quan trọng: Làm 'nhà' cho sticky con */
+}
+
+/* STICKY: Dính nhưng có giới hạn trong phần tử cha (.section-box) */
+.sticky-title {
+  background-color: #e2e2e2;
+  padding: 15px;
+  position: sticky;
+  /* top = 60px để nó nằm ngay dưới thanh Navbar (cao 60px) */
+  top: 60px; 
+  border-bottom: 2px solid #333;
+}
+
+.content {
+  padding: 20px;
+}
+
+/* FIXED: Nút quay lại đầu trang */
+.back-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: red;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+.back-top a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}

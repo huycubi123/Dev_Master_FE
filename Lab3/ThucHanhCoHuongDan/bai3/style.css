@@ -1,0 +1,32 @@
+.box-px{
+    width: 300px;
+    height: 100px;
+    background-color:rgb(7, 168, 255);
+    margin-bottom: 20px;
+}
+.box-percent{
+    width: 50%;
+    height: 100px;
+    background-color: rgb(138, 253, 76);
+    margin-bottom: 20px;
+}
+.box-em{
+    font-size: 20px;
+    width: 10em;
+    background-color: orange;
+    padding: 1em;
+    margin-bottom: 20px;
+}
+.box-rem{
+    font-size: 20px;
+    width: 10rem;
+    background-color:pink;
+    padding: 1rem;
+    margin-bottom: 20px;
+}
+.box-vw{
+    width: 50vw;
+    height: 60px;
+    background-color: rgb(255, 0, 255);
+    margin-bottom: 20px;
+}

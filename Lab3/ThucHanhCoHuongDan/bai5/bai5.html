@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>So sánh Fixed và Sticky</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="navbar">MENU CỐ ĐỊNH (FIXED)</div>
+
+    <div class="container">
+      <section class="section-box">
+        <h2 class="sticky-title">TIÊU ĐỀ KHỐI 1 (STICKY)</h2>
+        <div class="content">
+          <p>Nội dung khối 1...</p>
+          <p>Cuộn xuống để thấy tiêu đề này biến mất khi hết khối.</p>
+          <p style="height: 200px">(Nội dung của Khối 1...)</p>
+        </div>
+      </section>
+
+      <section class="section-box">
+        <h2 class="sticky-title" style="background-color: #ffcccc">
+          TIÊU ĐỀ KHỐI 2 (STICKY)
+        </h2>
+        <div class="content">
+          <p>Nội dung khối 2...</p>
+          <p>Tiêu đề khối 2 sẽ đẩy tiêu đề khối 1 đi.</p>
+          <p style="height: 800px">(Nội dung của Khối 2...)</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="back-top">
+      <a href="#">TOP</a>
+    </div>
+  </body>
+</html>

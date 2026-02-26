@@ -1,0 +1,25 @@
+p{
+    color: blue;
+}
+h1{
+    color: violet;
+}
+h2{
+    color: rgb(154, 16, 154);
+}
+.highlight{
+    color: rgb(72, 0, 255);
+    font-weight: bold;
+    background-color: yellow;
+    font-size: 20px;
+}
+#special{
+    color: rgb(255, 0, 0);
+    font-size: 20px;
+}
+.box p{
+    color: green;
+}
+ul li{
+    color: orange;
+}
