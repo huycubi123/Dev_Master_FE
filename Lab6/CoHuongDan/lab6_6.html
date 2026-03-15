@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            color: green;
+        }
+        h2{
+            color: red;
+        }
+        form div {
+            margin-bottom: 10px;
+        }
+        input[type="number"] {
+            width: 200px;
+            padding: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Giải phương trình bậc nhất</h1>
+    <p>Phương trình có dạng ax + b = 0</p>
+    <form name="frm" action="" method="post">
+        <div>
+            <label for="a">Nhập hệ số a:</label>
+            <input type="number" id="a" name="a">
+        </div>
+        <div>
+            <label for="b">Nhập hệ số b:</label>
+            <input type="number" id="b" name="b">
+        </div>
+        <div>
+            <input type="submit" value="Giải phương trình"
+            onclick="giaiPTBacNhat(); return false;">
+        </div>
+        <div id="ketqua"></div>
+        </form>
+
+        <script>
+            function giaiPTBacNhat(){
+                var a = document.frm.a.value; // Lấy giá trị của a từ form hoặc document.getElementById("a").value;
+                var b = document.frm.b.value; // Lấy giá trị của b từ form
+                a = parseFloat(a);
+                b = parseFloat(b);
+                if (a == 0) {
+                    if (b == 0) {
+                        document.getElementById("ketqua").innerHTML = "<h2>Phương trình vô số nghiệm</h2>";
+                    } else {
+                        document.getElementById("ketqua").innerHTML = "<h2>Phương trình vô nghiệm</h2>";
+                    }   
+                }
+                else{
+                    var x = -b / a;
+                    document.getElementById("ketqua").innerHTML = "<h2>Nghiệm của phương trình là x = " + x + "</h2>";
+                }
+            }
+        </script>
+</body>
+</html>

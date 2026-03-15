@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Chuỗi trong JS</h1>
+    <script>
+        var text = "Học lạp trình tại Devmaster";
+        document.write("Chuỗi ban đầu là: " + text + "<br>");
+        document.write("Độ dài của chuỗi: " + text.length + "<br>");
+        document.write("CHuyển sang chữ hoa : " + text.toUpperCase() + "<br>");
+        document.write("Chuyển sang chữ thường: " + text.toLowerCase() + "<br>");
+        document.write("Vị trí chữ \"tại\": " + text.indexOf("tại") + "<br>");
+        document.write("Căt chuỗi từ vị trí 5 đến 15: " + text.substring(5, 15) + "<br>");
+        document.write("Thay thế \"Devmaster\" bằng \"JavaScript\": " + text.replace("Devmaster", "JavaScript") + "<br>");
+        document.write("<hr>");
+        var word = text.split(" ");
+        document.write("Tách chuỗi thành mảng:<br>");
+        for(var i = 0; i < word.length; i++){
+            document.write(word[i] + "<br>");
+        }
+    </script>
+</body>
+</html>
