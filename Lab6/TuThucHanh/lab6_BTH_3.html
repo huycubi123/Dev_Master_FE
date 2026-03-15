@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Máy tính đơn giản</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      #box {
+        width: 400px;
+        height: auto;
+        padding: 20px;
+        border: 2px solid rgb(150, 250, 0);
+        border-radius: 5px;
+        margin: 20px auto;
+      }
+      h1 {
+        text-align: center;
+        color: rgb(1, 9, 15);
+        margin-bottom: 15px;
+      }
+      input[type="number"],
+      input[type="text"] {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid rgb(150, 250, 0);
+        border-radius: 10px;
+        box-sizing: border-box;
+      }
+      .position{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .checkbox {
+        width: 150px;
+        height: 40px;
+        margin: 15px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(6, 152, 4);
+        color: yellow;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      .checkbox:hover {
+        background-color: rgb(30, 160, 30);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box">
+      <h1>Tính số ngày </h1>
+      <form action="">
+        <div>
+          <input type="number" id="a" placeholder="Nhập tháng " />
+        </div>
+        <div>
+          <input type="number" id="b" placeholder="Nhập năm " />
+        </div>
+        <div class="position">
+        <div class="checkbox" onclick="calc();">
+            Tính số ngày 
+        </div>
+        </div>
+        <div>
+          <input type="text" id="result" placeholder="Kết quả" readonly />
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function calc(operator) {
+        var a = parseFloat(document.getElementById("a").value);
+        var b = parseFloat(document.getElementById("b").value);
+        var resultField = document.getElementById("result");
+
+        if (isNaN(a) || isNaN(b)) {
+          resultField.value = "Vui lòng nhập đủ tháng và năm";
+          return;
+        }
+        if (a < 1 || a > 12) {
+          resultField.value = "Tháng phải từ 1 đến 12";
+          return;
+        }
+        switch (a) {
+          case 1:   case 3: case 5: case 7: case 8: case 10: case 12:
+            resultField.value = "Tháng " + a + " có 31 ngày";
+            break;
+            case 4: case 6: case 9: case 11:
+            resultField.value = "Tháng " + a + " có 30 ngày";
+            break;
+            case 2:
+            if (b % 4 == 0 && b % 100 != 0 || b % 400 == 0) {
+              resultField.value = "Tháng " + a + " có 29 ngày";
+            } else {
+              resultField.value = "Tháng " + a + " có 28 ngày";
+            }
+            break;
+          default:
+            resultField.value = "";
+        }
+      }
+        
+    </script>
+  </body>
+</html>

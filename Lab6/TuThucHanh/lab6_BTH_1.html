@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 300px;
+            padding: 20px;
+            border: 2px solid rgb(150, 250, 0);
+            border-radius: 5px;
+            margin: 0 auto;
+        }
+        h1{
+            text-align: center;
+            color: rgb(1, 9, 15);
+        }
+        input[type="text"], input[type="password"]{
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid rgb(150, 250, 0);
+            border-radius: 10px;
+            box-sizing: border-box;
+        }
+        .checkbox {
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        
+        }
+        input[type="submit"]{
+            width: 100%;
+            padding: 10px;
+            background-color:rgb(37, 192, 37);
+            color: #fff;
+            border: none;
+            border-radius: 10px;;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h1>Login Information</h1>
+        <form action="">
+            <div>
+                <input type="text" id="username" name="username" placeholder="Username">
+                <p id="user-err"></p>
+            </div>
+            <div>
+                <input type="password" id="password" name="password" placeholder="Password">
+                <p id="pass-err"></p>
+            </div>
+            <div class="checkbox">
+                <input type="checkbox" id="check" name="check">
+                <label for="check"> Remember me</label>
+            </div>
+            <div>
+                <input type="submit" value="Login" onclick="validateForm(); return false;">
+        </form>
+    </div>
+<script>
+        function validateForm(){
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+            var userErr = document.getElementById("user-err");
+            var passErr = document.getElementById("pass-err");
+            var isValid = true;
+
+            if(username === ""){
+                userErr.innerHTML = "Username không được để trống";
+                userErr.style.color = "red";
+                isValid = false;
+            } else {
+                userErr.innerHTML = "";
+            }
+
+            if(password === ""){
+                passErr.innerHTML = "Password không được để trống";
+                passErr.style.color = "red";
+                isValid = false;
+            } else {
+                passErr.innerHTML = "";
+            }
+
+            if(isValid){
+                if(username === "admin" && password === "123456"){
+                    alert("Đăng nhập thành công");
+                    document.getElementById("username").value = "";
+                    document.getElementById("password").value = "";
+                } else {
+                    alert("Sai thông tin đăng nhập");
+                }
+            }
+        }
+    </script>
+</body>
+</html>
