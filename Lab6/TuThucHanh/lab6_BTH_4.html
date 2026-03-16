@@ -6,16 +6,62 @@
     <title>Document</title>
 </head>
 <body>
-    <script>
-        // in ra tam giác các số 0 , 01 , 012 , 0123 , 01234 ... 0123456789, ngược lại, sang trái, sang phải 
-        for (var i = 0; i <= 9; i++) {
-            var line = "";
-            for (var j = 0; j <= i; j++) {
-                line += j;
-            }
-            document.write(line + "<br>");
-        }
     
+<style>
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      td {
+        border: 1px solid black;
+        padding: 15px;
+        vertical-align: top;
+        width: 25%;
+      }
+      .right {
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td id="h1" class="left"></td>
+        <td id="h2" class="right"></td>
+        <td id="h3" class="right"></td>
+        <td id="h4" class="left"></td>
+      </tr>
+      <tr>
+        <td>Hình 1</td>
+        <td>Hình 2</td>
+        <td>Hình 3</td>
+        <td>Hình 4</td>
+      </tr>
+    </table>
+
+    <script>
+      const n = 10;
+
+      let to0="";
+      for (let i = 0; i < n; i++) {
+        for (let j = 0; j <= i; j++) to0 += j;
+        to0 += "<br>";
+      }
+
+      let tu9="";
+      for (let i = n - 1; i >= 0; i--) {
+        for (let j = 0; j <= i; j++) tu9 += j;
+        tu9 += "<br>";
+      }
+
+      // Hình 1:
+      document.getElementById("h1").innerHTML = to0;
+      // HÌNH 2
+      document.getElementById("h2").innerHTML = tu9;
+      // Hình 3
+      document.getElementById("h3").innerHTML = to0;
+      //Hình 4
+      document.getElementById("h4").innerHTML = tu9;
     </script>
-</body>
+  </body>
 </html>

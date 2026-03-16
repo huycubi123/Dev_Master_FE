@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+        }
+        .box {
+            border: 2px solid #4CAF50;
+            border-radius: 15px;
+            padding: 30px 50px;
+            background-color: white;
+            text-align: center;
+            line-height: 1.5;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box" id="display"></div>
+
+    <script>
+        const display = document.getElementById('display');
+        const maxNum = 9;
+        let result = "";
+
+        // Hàm tạo một dòng số đối xứng
+        function createRow(n) {
+            let row = "";
+            // Vế tăng từ 0 đến n
+            for (let i = 0; i <= n; i++) row += i + " ";
+            // Vế giảm từ n-1 về 0
+            for (let i = n - 1; i >= 0; i--) row += i + " ";
+            return row.trim();
+        }
+
+        // 1. Nửa trên: Từ 9 về 0
+        for (let i = maxNum; i >= 0; i--) {
+            result += createRow(i) + "<br>";
+        }
+
+        // 2. Nửa dưới: Từ 0 lên 9
+        for (let i = 0; i <= maxNum; i++) {
+            result += createRow(i) + "<br>";
+        }
+
+        display.innerHTML = result;
+    </script>
+
+</body>
+</html>

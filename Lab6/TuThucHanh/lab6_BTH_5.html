@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            margin-top: 50px;
+            line-height: 1.2;
+        }
+        .container {
+            display: inline-block;
+            text-align: center;
+            white-space: pre; /* Giữ khoảng trắng để căn chỉnh */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Tam Giác Số Đối Xứng</h2>
+    <div class="container" id="result"></div>
+
+    <script>
+        function generateTriangle(rows) {
+            let container = document.getElementById('result');
+            let content = "";
+
+            for (let i = 0; i < rows; i++) {
+                let rowStr = "";
+
+                // Phần tăng dần từ 0 đến i
+                for (let j = 0; j <= i; j++) {
+                    rowStr += j + " ";
+                }
+
+                // Phần giảm dần từ i-1 về 0
+                for (let j = i - 1; j >= 0; j--) {
+                    rowStr += j + " ";
+                }
+
+                content += rowStr.trim() + "\n";
+            }
+
+            container.innerText = content;
+        }
+
+        // Gọi hàm với 10 dòng (từ 0 đến 9) như trong hình
+        generateTriangle(10);
+    </script>
+
+</body>
+</html>
