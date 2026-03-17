@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        padding: 20px;
+      }
+      .container {
+        border: 2px solid #4caf50;
+        border-radius: 15px;
+        padding: 20px;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      h2 {
+        color: #2e7d32;
+        font-size: 20px;
+        margin-bottom: 15px;
+      }
+      .row {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #4caf50;
+      }
+      .row:last-child {
+        border-bottom: none;
+      }
+
+      .circle {
+        width: 40px;
+        height: 40px;
+        border: 2px solid #e57373;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #e57373;
+        font-weight: bold;
+      }
+      .text-info {
+        color: #2e7d32;
+        font-weight: bold;
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Mảng ngẫu nhiên:</h2>
+      <div id="original-array" class="row"></div>
+
+      <h2>Các số nguyên tố trong mảng:</h2>
+      <div id="prime-array" class="row"></div>
+
+      <h2>Mảng sau khi sắp xếp tăng dần:</h2>
+      <div id="sorted-array" class="row"></div>
+    </div>
+
+    <script>
+      // 1. Tạo mảng 10 phần tử ngẫu nhiên có 2 chữ số (10 - 99)
+      let arr = [];
+      for (let i = 0; i < 10; i++) {
+        arr.push(Math.floor(Math.random() * 90) + 10);
+      }
+
+      // Hàm kiểm tra số nguyên tố
+      function isPrime(n) {
+        if (n < 2) return false;
+        for (let i = 2; i <= Math.sqrt(n); i++) {
+          if (n % i === 0) return false;
+        }
+        return true;
+      }
+
+      // Hàm hiển thị mảng vào một element cụ thể
+      function displayArray(targetId, arrayToDisplay) {
+        const container = document.getElementById(targetId);
+        arrayToDisplay.forEach((num) => {
+          const div = document.createElement("div");
+          div.className = "circle";
+          div.innerText = num;
+          container.appendChild(div);
+        });
+      }
+
+      // 2. Hiển thị mảng gốc
+      displayArray("original-array", arr);
+
+      // 3. Xử lý số nguyên tố
+      const primes = arr.filter(isPrime);
+      const primeSum = primes.reduce((a, b) => a + b, 0);
+      displayArray("prime-array", primes);
+
+      // Thêm thông tin tổng và số lượng
+      const primeInfo = document.getElementById("prime-array");
+      primeInfo.innerHTML += `
+    <span class="text-info">==> Có</span>
+    <div class="circle">${primes.length}</div>
+    <span class="text-info">số nguyên tố và tổng</span>
+    <div class="circle">${primeSum}</div>
+`;
+
+      // 4. Sắp xếp mảng tăng dần và hiển thị
+      const sortedArr = [...arr].sort((a, b) => a - b);
+      displayArray("sorted-array", sortedArr);
+    </script>
+  </body>
+</html>
