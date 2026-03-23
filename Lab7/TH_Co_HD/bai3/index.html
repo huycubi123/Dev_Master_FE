@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <style>
+      /* --- CSS tham khảo từ ảnh image_661624.png --- */
+      #main {
+        width: 670px;
+        margin: 0 auto;
+      }
+
+      #image img {
+        width: 100%;
+        height: 446px;
+        object-fit: cover;
+      }
+
+      #thum ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+
+      #thum ul li {
+        float: left;
+        margin-right: 2px;
+      }
+
+      #thum ul li a img {
+        width: 105px;
+        /* Thêm chiều cao cố định để các ảnh thumbnail đều nhau */
+        height: 70px;
+        border: solid 2px #ccc;
+        object-fit: cover; /* nếu là contain thì giữ nguyên tỷ lệ ảnh, cover là cắt ảnh để vừa khung */
+      }
+
+      /* Class để tạo viền đỏ khi ảnh được chọn */
+      .actived {
+        border: solid 4px red !important;
+      }
+
+    </style>
+
+    <script>
+      /* --- JS/jQuery tham khảo từ ảnh image_661641.png --- */
+      jQuery(document).ready(function ($) {
+        // Khi người dùng click vào ảnh nhỏ bên trong thẻ a
+        $("a > img").click(function (event) {
+          // 1. Lấy đường dẫn (src) của ảnh nhỏ vừa được click
+          var imgPath = $(this).attr("src");
+
+          // 2. Thay đổi đường dẫn cho ảnh to 
+          $("#image > img").attr("src", imgPath);
+
+          // 3. Xóa viền đỏ (class 'actived') của tất cả các ảnh nhỏ khác
+          $("a > img").removeClass("actived");
+
+          // 4. Thêm viền đỏ vào chính ảnh nhỏ vừa click
+          $(this).addClass("actived");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="main">
+      <div id="image">
+        <img src="https://picsum.photos/id/10/670/446" alt="Ảnh chính" />
+      </div>
+
+      <div id="thum">
+        <ul>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="https://picsum.photos/id/10/670/446" class="actived" />
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="https://picsum.photos/id/11/670/446" />
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="https://picsum.photos/id/12/670/446" />
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="https://picsum.photos/id/13/670/446" />
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="https://picsum.photos/id/14/670/446" />
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <img src="https://picsum.photos/id/15/670/446" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

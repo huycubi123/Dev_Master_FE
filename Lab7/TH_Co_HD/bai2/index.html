@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đổi màu nền trang</title>
+    <style>
+        body {
+            transition: background-color 0.4s ease;
+            min-height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+        }
+        .box {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff; 
+            text-align: center;
+        }
+        .changeColor {
+            display: flex;
+            justify-content: space-between;
+        }
+        .Color {
+            width: 70px;
+            height: 70px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            /* Các ô không có màu nền, chỉ có màu chữ xanh */
+            color: blue; 
+            background-color: transparent; 
+        }
+        h1 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <h1>Chọn màu nền</h1>
+        <div class="changeColor">
+            <div class="Color" data-color="red"><p>Đỏ</p></div>
+            <div class="Color" data-color="green"><p>Xanh</p></div>
+            <div class="Color" data-color="yellow"><p>Vàng</p></div>
+            <div class="Color" data-color="gray"><p>Ghi</p></div>
+            <div class="Color" data-color="purple"><p>Tím</p></div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".Color").click(function () {
+                // Lấy màu từ thuộc tính data-color
+                var selectedBg = $(this).attr("data-color");
+
+                // Đổi màu nền cho body (cả trang)
+                $("body").css("background-color", selectedBg); 
+                // tương đương với document.body.style.backgroundColor = selectedBg; trong JavaScript thuần
+            });
+        });
+    </script>
+</body>
+</html>

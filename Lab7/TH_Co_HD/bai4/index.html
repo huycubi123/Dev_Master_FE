@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <style>
+        .clearfix {
+            clear: both;
+            overflow: hidden;
+        }
+        #main ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #main ul li {
+            float: left;
+            margin-right: 5px;
+        }
+        #main ul li a {
+            border: solid 1px #ccc;
+            border-bottom: none;
+            padding: 8px 20px;
+            display: block;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+            text-decoration: none;
+            background: #d2d3d5;
+            color: #000;
+        }
+
+        /* Class selected khi tab được chọn */
+        .selected {
+            background: #782a90 !important;
+            color: #FFF !important;
+            border-bottom: solid 1px #fff;
+            position: relative;
+            z-index: 10;
+        }
+
+        #content {
+            border: solid 1px #ccc;
+            width: 500px;
+            height: 200px;
+            margin-top: -1px;
+            padding: 15px;
+            background-color: #fff;
+        }
+    </style>
+
+    <script>
+        $(document).ready(function($) {
+            // 1. Thiết lập nội dung mặc định khi vừa mở trang
+            $("#content").html("đây là html");
+
+            // 2. Lắng nghe sự kiện click vào các thẻ a
+            $("#main ul li a").click(function(event) {
+                // Xóa class selected của tất cả các thẻ a
+                $('#main ul li a').removeClass('selected');
+
+                // Thêm class selected vào thẻ vừa click
+                $(this).addClass('selected');
+
+                // Lấy ID của thẻ vừa click
+                var id = $(this).attr('id');
+
+                // 3. Đổi chữ ở dưới tương ứng với ID
+                $("#content").html("đây là " + id);
+                // tương đương với document.getElementById("content").innerHTML = "đây là " + id; trong Dom
+            });
+        });
+    </script>
+</head>
+<body>
+
+    <div id="main" class="clearfix">
+        <ul class="clearfix">
+            <li><a href="javascript:void(0)" class="selected" id="html">HTML</a></li>
+            <li><a href="javascript:void(0)" id="css">CSS</a></li>
+            <li><a href="javascript:void(0)" id="jquery">Jquery</a></li>
+            <li><a href="javascript:void(0)" id="php">PHP</a></li>
+        </ul>
+
+        <div id="content"> </div>
+    </div>
+
+</body>
+</html>
