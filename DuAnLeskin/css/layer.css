@@ -283,118 +283,110 @@ footer input:focus-visible {
 
 
 /* Main */
-/* Font & Color đồng bộ từ Header của bạn */
-.cl-yellow { color: #dd8f22; }
-.bg-yellow { background-color: #dd8f22; }
-
-/* Tựa đề Section */
-.title-section {
-    font-family: 'Roboto-Bold', sans-serif;
-    font-size: 1.125rem;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 5px;
+/* ===== TITLE ===== */
+.coupon-title {
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
-/* 1. Banner */
-#home-banner img {
-    display: block;
-    object-fit: cover;
+.cl-yellow {
+    color: #dd8f22;
 }
 
-/* 2. Stats Section */
-.stat-item img {
-    height: 42px;
-    width: auto;
-    object-fit: contain;
-}
-.stat-text {
-    font-family: 'Roboto-Regular', sans-serif;
-    font-size: 11px;
-    color: #555;
-    line-height: 1.3;
-    margin-top: 8px;
-}
-.stat-text span {
-    font-family: 'Roboto-Bold';
-    font-weight: bold;
-}
-
-/* 3. Card chung */
-.card-title-custom {
-    font-family: 'Roboto-Bold', sans-serif;
-    font-size: 14px;
-    color: #222;
-    line-height: 1.4;
-    height: 40px;
+/* ===== CARD ===== */
+.coupon-card {
+    background: #fff;
+    border-radius: 8px;
     overflow: hidden;
+    border: 1px solid #eee;
+    transition: 0.3s;
+}
+
+.coupon-card:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== IMAGE ===== */
+.coupon-img {
+    position: relative;
+}
+
+.coupon-img img {
+    width: 100%;
+    display: block;
+}
+
+/* ===== LOGO TRÒN ===== */
+.brand-badge {
+    position: absolute;
+    bottom: -28px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 65px;
+    height: 65px;
+    background: #f5f5f5;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.brand-badge img {
+    width: 70%;
+}
+
+/* ===== BODY ===== */
+.coupon-body {
+    padding: 40px 15px 15px;
+}
+
+/* ===== TITLE TEXT ===== */
+.coupon-title-text {
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.5;
+
+    height: 42px;
+    overflow: hidden;
+
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
 }
 
-.text-date {
-    font-size: 11px;
-    color: #999;
-}
-
-.btn-more {
-    font-size: 11px;
-    color: #dd8f22;
-    border: 1px solid #dd8f22;
-    padding: 3px 12px;
-    border-radius: 12px;
-    font-weight: bold;
-    transition: all 0.3s;
-}
-.btn-more:hover {
-    background-color: #dd8f22;
-    color: #fff !important;
-}
-
-/* 4. Coupon Badge (Logo tròn đè lên ranh giới) */
-.brand-badge {
-    position: absolute;
-    bottom: -22px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: #fff;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
+/* ===== FOOTER ===== */
+.coupon-footer {
+    margin-top: 15px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-    justify-content: center;
-    padding: 6px;
-    z-index: 5;
-    border: 1px solid #eee;
-}
-.brand-badge img {
-    max-width: 100%;
-    object-fit: contain;
 }
 
-.btn-load-more {
-    font-family: 'Roboto-Bold';
-    font-size: 13px;
-    letter-spacing: 1px;
-    padding: 10px 45px;
+/* DATE */
+.date {
+    font-size: 12px;
+    color: #777;
 }
 
-/* 5. Brand Logos */
-.grayscale img {
-    filter: grayscale(100%);
-    opacity: 0.5;
+.icon {
+    color: #ff7a00;
+    margin-right: 5px;
+}
+
+/* BUTTON */
+.btn-more {
+    font-size: 12px;
+    padding: 4px 14px;
+    border: 1px solid #ff7a00;
+    border-radius: 20px;
+    color: #ff7a00;
+    text-decoration: none;
     transition: 0.3s;
-    max-height: 30px;
-}
-.grayscale img:hover {
-    filter: none;
-    opacity: 1;
 }
 
-/* Responsive cho mobile */
-@media (max-width: 768px) {
-    .stat-item { margin-bottom: 15px; }
-    .brand-badge { width: 40px; height: 40px; bottom: -20px; }
+.btn-more:hover {
+    background: #ff7a00;
+    color: #fff;
 }
