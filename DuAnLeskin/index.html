@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leskin - Trang chủ</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/layer.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid d-flex justify-content-between">
+            <div class="logo-img">
+              <img src="images/logo.png" alt="Logo" />
+            </div>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div
+              class="collapse navbar-collapse justify-content-evenly"
+              id="navbarSupportedContent"
+            >
+              <form class="d-flex" role="search">
+                <input
+                  class="form-control"
+                  type="search"
+                  id="input-search"
+                  placeholder="Hôm nay bạn muốn ăn gì..."
+                  aria-label="Search"
+                />
+                <button
+                  id="btn-search"
+                  class="btn btn-outline-success"
+                  type="submit"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+              </form>
+              <ul class="navbar-nav mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    ><span><i class="fa-solid fa-house"></i></span><br /><span>
+                      Trang chủ
+                    </span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    ><span><i class="fa-solid fa-circle-info"></i></span
+                    ><br /><span> Giới thiệu </span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    ><span><i class="fa-solid fa-gift"></i></span><br /><span>
+                      Ưu đãi
+                    </span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    ><span><i class="fa-solid fa-bullhorn"></i></span
+                    ><br /><span> Tin tức </span></a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" aria-current="page" href="#"
+                    ><span><i class="fa-regular fa-envelope"></i></span
+                    ><br /><span> Liên hệ </span></a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div id="box-sign">
+              <button type="submit" class="btn bg-yellow text-white">
+                Đăng nhập
+              </button>
+              <button type="submit" class="btn cl-yellow">Đăng ký</button>
+            </div>
+            <div id="box-infor">
+              <p>
+                <span
+                  ><i class="fa-2xl fa-solid fa-circle-user cl-yellow"></i
+                ></span>
+                <span id="name-user">User Name</span>
+                <span><i class="fa-solid fa-angle-down"></i></span>
+              </p>
+              <div id="box-infor-hover">
+                <p><a href="#">Tài khoản của tôi</a></p>
+                <p id="btn-dang-xuat"><a href="#">Đăng xuất</a></p>
+              </div>
+            </div>
+            <!-- <div class="diagonal-box"></div> -->
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main  -->
+   <main>
+    <section id="home-banner">
+        <div class="container-fluid p-0">
+            <img src="images/TrangChu/banner.png" class="img-fluid w-100" alt="Banner Daisy Marc Jacobs">
+        </div>
+    </section>
+
+    <section id="home-stats" class="py-4 bg-light">
+        <div class="container">
+            <div class="row g-4 text-center">
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="images/TrangChu/ic_hoanTien.png" alt="Icon" class="mb-2" width="40">
+                        <p class="small fw-bold mb-0">HOÀN TIỀN TỚI<br>15% VÀO VÍ</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="images/TrangChu/ic_uuDai.png" alt="Icon" class="mb-2" width="40">
+                        <p class="small fw-bold mb-0">50+ ƯU ĐÃI<br>MỖI THÁNG</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="images/TrangChu/ic_datDichVu.png" alt="Icon" class="mb-2" width="40">
+                        <p class="small fw-bold mb-0">ĐẶT DỊCH VỤ<br>NHANH CHÓNG</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="images/TrangChu/ic_star_ThuongHieu.png" alt="Icon" class="mb-2" width="40">
+                        <p class="small fw-bold mb-0">HƠN 22<br>THƯƠNG HIỆU</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-4 text-center mt-2">
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="images/TrangChu/ic_Spa.png" alt="Icon" class="mb-2" width="40">
+                        <p class="small fw-bold mb-0">HƠN 300+<br>SPA LÀM ĐẸP</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="images/TrangChu/ic_doiTac.png" alt="Icon" class="mb-2" width="40">
+                        <p class="small fw-bold mb-0">HƠN 250+<br>ĐỐI TÁC</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="images/TrangChu/ic_khachHang.png" alt="Icon" class="mb-2" width="40">
+                        <p class="small fw-bold mb-0">HƠN 1250+<br>KHÁCH HÀNG</p>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3">
+                    <div class="d-flex flex-column align-items-center">
+                        <img src="images/TrangChu/ic_thanhPho.png" alt="Icon" class="mb-2" width="40">
+                        <p class="small fw-bold mb-0">HƠN 25<br>THÀNH PHỐ</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="voucher-hot" class="py-5">
+        <div class="container">
+            <h4 class="mb-4">VOUCHER <span class="text-warning">HOT</span></h4>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="images/TrangChu/img_voucher1.png" class="card-img-top" alt="Voucher">
+                        <div class="card-body">
+                            <h6 class="card-title text-truncate-2">Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h6>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <small class="text-muted"><i class="far fa-calendar-alt"></i> 05/07/19 - 31/08/19</small>
+                                <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-3">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="images/TrangChu/img_voucher2.png" class="card-img-top" alt="Voucher">
+                        <div class="card-body">
+                            <h6 class="card-title text-truncate-2">Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h6>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <small class="text-muted">05/07/19 - 31/08/19</small>
+                                <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-3">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <img src="images/TrangChu/img_voucher3.png" class="card-img-top" alt="Voucher">
+                        <div class="card-body">
+                            <h6 class="card-title text-truncate-2">Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h6>
+                            <div class="d-flex justify-content-between align-items-center mt-3">
+                                <small class="text-muted">05/07/19 - 31/08/19</small>
+                                <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-3">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <section id="coupon-hot" class="py-5 bg-light">
+        <div class="container">
+            <h4 class="mb-4">COUPON <span class="text-warning">HOT</span></h4>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="position-relative">
+                            <img src="images/TrangChu/img_coupon_1.png" class="card-img-top" alt="Coupon">
+                            <img src="images/TrangChu/ic_Hadalobo.png" class="position-absolute top-100 start-50 translate-middle border rounded-circle bg-white" width="60" style="margin-top: -10px;">
+                        </div>
+                        <div class="card-body mt-4">
+                            <h6 class="card-title px-2">Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h6>
+                            <div class="d-flex justify-content-between align-items-center mt-3 p-2">
+                                <small class="text-muted">05/07/19 - 31/08/19</small>
+                                <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-3">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="position-relative">
+                            <img src="images/TrangChu/img_coupon_2.png" class="card-img-top" alt="Coupon">
+                            <img src="images/TrangChu/ic_Loreal.png" class="position-absolute top-100 start-50 translate-middle border rounded-circle bg-white" width="60" style="margin-top: -10px;">
+                        </div>
+                        <div class="card-body mt-4">
+                            <h6 class="card-title px-2">Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h6>
+                            <div class="d-flex justify-content-between align-items-center mt-3 p-2">
+                                <small class="text-muted">05/07/19 - 31/08/19</small>
+                                <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-3">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100 border-0 shadow-sm text-center">
+                        <div class="position-relative">
+                            <img src="images/TrangChu/img_coupon_3.png" class="card-img-top" alt="Coupon">
+                            <img src="images/TrangChu/ic_Missa.png" class="position-absolute top-100 start-50 translate-middle border rounded-circle bg-white" width="60" style="margin-top: -10px;">
+                        </div>
+                        <div class="card-body mt-4">
+                            <h6 class="card-title px-2">Xóa Nhăn Vùng Mắt, Trán, Cau Mày, Khóe Miệng 1 Lần Duy Nhất...</h6>
+                            <div class="d-flex justify-content-between align-items-center mt-3 p-2">
+                                <small class="text-muted">05/07/19 - 31/08/19</small>
+                                <a href="#" class="btn btn-outline-warning btn-sm rounded-pill px-3">Xem thêm</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <button class="btn btn-warning text-white px-5 rounded-1">XEM THÊM <i class="fas fa-caret-down"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <section id="brand-logos" class="py-4 border-top">
+        <div class="container">
+            <div class="row align-items-center justify-content-center g-4 opacity-75">
+                <div class="col-4 col-md-2 text-center"><img src="images/TrangChu/index4_09.png" class="img-fluid" alt="Loreal"></div>
+                <div class="col-4 col-md-2 text-center"><img src="images/TrangChu/index4_12.png" class="img-fluid" alt="Dove"></div>
+                <div class="col-4 col-md-2 text-center"><img src="images/TrangChu/index4_15.png" class="img-fluid" alt="NYX"></div>
+                <div class="col-4 col-md-2 text-center"><img src="images/TrangChu/index4_03.png" class="img-fluid" alt="Revlon"></div>
+                <div class="col-4 col-md-2 text-center"><img src="images/TrangChu/index4_06.png" class="img-fluid" alt="Benefit"></div>
+                <div class="col-4 col-md-2 text-center"><img src="images/TrangChu/index4_09.png" class="img-fluid" alt="Olay"></div>
+            </div>
+        </div>
+    </section>
+</main>
+
+    <!-- Footer -->
+
+    <footer>
+      <div class="container-xxl">
+        <div class="row">
+          <div class="col-3">
+            <h4>Liên hệ</h4>
+
+            <address>
+              <span> <i class="fa-solid fa-location-dot"></i> </span>
+              <span>58 Tố Hữu, Thanh Xuân, Hà Nội</span>
+            </address>
+
+            <p>
+              <span><i class="fa-solid fa-phone"></i></span>
+              <a href="tel:024.3783.5639">(024).3783.5639</a>
+            </p>
+            <p>
+              <span><i class="fa-solid fa-envelope"></i></span>
+              <a href="mailto:info@adcvietnam.net">info@adcvietnam.net</a>
+            </p>
+            <p>
+              <span><i class="fa-solid fa-globe"></i></span>
+              <a href="https://www.adcvietnam.net" target="_blank"
+                >www.adcvietnam.net</a
+              >
+            </p>
+          </div>
+          <div class="col-3">
+            <h4>Về LesKin</h4>
+
+            <p>
+              <a href="#">Về chúng tôi</a>
+            </p>
+
+            <p>
+              <a href="#">Sứ mệnh</a>
+            </p>
+            <p>
+              <a href="#">Tăng trường</a>
+            </p>
+            <p>
+              <a href="#">Quan hệ cổ đông</a>
+            </p>
+          </div>
+          <div class="col-3">
+            <h4>Tải app ngay</h4>
+            <div class="img-download">
+              <img src="images/taiApp.png" alt="Tải app" />
+            </div>
+            <div class="img-download">
+              <img src="images//appStore.png" alt="App Store" />
+            </div>
+          </div>
+          <div class="col-3">
+            <h4>Newletter</h4>
+            <p>Đăng ký để nhận ưu đãi hàng tháng</p>
+            <p>
+              <input
+                type="email"
+                placeholder="Nhập email"
+                name="email"
+                id="email"
+              />
+              <button type="submit">
+                <i class="fa-solid fa-paper-plane"></i>
+              </button>
+            </p>
+            <p class="social-icon">
+              <!-- icon facebook -->
+              <i class="fa-2xl fa-brands fa-facebook-f"></i>
+              <!-- icon youtube -->
+              <a href="#" target="_blank"
+                ><i class="fa-2xl fa-brands fa-youtube"></i
+              ></a>
+              <!-- icon instagram -->
+              <a href="#" target="_blank"
+                ><i class="fa-2xl fa-brands fa-instagram"></i
+              ></a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      const nameLocalUser = "Dev2601_DangNhap";
+      function getUser() {
+        var user = localStorage.getItem(nameLocalUser)
+          ? JSON.parse(localStorage.getItem(nameLocalUser))
+          : null;
+        return user;
+      }
+      function setUser(user) {
+        localStorage.setItem(nameLocalUser, JSON.stringify(user));
+      }
+      var tk = {
+        name: "Phí Gia Huy ",
+        password: "123456",
+      };
+      function kiemTraDangNhap() {
+        var user = getUser();
+        if (!user) {
+          $("#box-sign").show();
+          $("#box-infor").hide();
+        } else {
+          $("#box-sign").hide();
+          $("#box-infor").show();
+          $("#name-user").text(user.name);
+        }
+      }
+
+      function InforShow() {
+        var kt = $("#box-infor-hover").css("display");
+        if (kt == "none") {
+          $("#box-infor-hover").show();
+        } else {
+          $("#box-infor-hover").hide();
+        }
+      }
+
+      function DangXuat() {
+        localStorage.removeItem(nameLocalUser);
+        kiemTraDangNhap();
+      }
+      $(document).ready(function () {
+        setUser(tk);
+        kiemTraDangNhap();
+        $("#btn-dang-xuat").click(function () {
+          DangXuat();
+        });
+        $("#box-infor").click(function () {
+          InforShow();
+        });
+      });
+    </script>
+  </body>
+</html>
